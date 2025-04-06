@@ -53,6 +53,16 @@ export default function NoteSubmission() {
       submitData.append("file", file)
     }
 
+    try {
+      const response = await fetch('http://' {
+        method: 'POST',
+        body: submitData,
+      })
+    if (!response.ok) {
+        throw Error('Failed to submit note')
+      }
+    
+
     setFormData({ name: "", crn: "", author: "", description: "" })
     setTags([])
     setFile(null)
