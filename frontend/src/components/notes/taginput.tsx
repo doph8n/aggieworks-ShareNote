@@ -26,7 +26,6 @@ export function TagInput({ tags, setTags, placeholder = "Add tag..." }: TagInput
     }
   }
 
-  // Memoize the removeTag function to ensure it's stable
   const removeTag = useCallback((indexToRemove: number) => {
     setTags(tags.filter((_, index) => index !== indexToRemove))
   }, [tags, setTags])

@@ -36,7 +36,6 @@ export default function NoteSubmission() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
 
-    // Create form data to send
     const submitData = new FormData()
     submitData.append("name", formData.name)
     submitData.append("crn", formData.crn)
@@ -46,9 +45,7 @@ export default function NoteSubmission() {
       submitData.append("description", formData.description)
     }
 
-    // Add tags to form data
     if (tags.length > 0) {
-      // Append tags as JSON string or as individual items based on your API requirements
       submitData.append("tags", JSON.stringify(tags))
     }
 
@@ -56,11 +53,6 @@ export default function NoteSubmission() {
       submitData.append("file", file)
     }
 
-    // Here you would typically send the data to your API
-    console.log("Form submitted:", Object.fromEntries(submitData))
-    console.log("Tags:", tags)
-
-    // Reset form and close dialog
     setFormData({ name: "", crn: "", author: "", description: "" })
     setTags([])
     setFile(null)

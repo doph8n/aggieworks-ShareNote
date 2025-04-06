@@ -1,38 +1,18 @@
 import Link from "next/link"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { FileText, Clock, Users } from "lucide-react"
+import { FileText, Clock } from "lucide-react"
 
 export default function MyNotesPage() {
-  // This would typically come from your database
   const notes = [
     {
       id: "1",
       name: "Introduction to Computer Science",
       crn: "CS101",
-      author: "John Doe",
-      updatedAt: "2023-04-10T10:30:00Z",
-    },
-    {
-      id: "2",
-      name: "Data Structures and Algorithms",
-      crn: "CS201",
-      author: "John Doe",
-      updatedAt: "2023-04-08T14:15:00Z",
-    },
-    {
-      id: "3",
-      name: "Calculus II Notes",
-      crn: "MATH202",
-      author: "John Doe",
-      updatedAt: "2025-04-05T09:45:00Z",
-    },
-    {
-      id: "4",
-      name: "Organic Chemistry Lab",
-      crn: "CHEM301",
-      author: "John Doe",
-      updatedAt: "2024-04-01T16:20:00Z",
+      author: "Doe",
+      updatedAt: "2025-04-06",
+      attachment:
+      link:
     },
   ]
 
